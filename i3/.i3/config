@@ -101,6 +101,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 bindsym $mod+d exec rofi -show run
 bindsym $mod+Shift+f exec pcmanfm
+bindsym $mod+Shift+x exec lock -d
 
 exec --no-startup-id redshift
 exec_always --no-startup-id feh --randomize --bg-scale ~/.wallpapers/*
