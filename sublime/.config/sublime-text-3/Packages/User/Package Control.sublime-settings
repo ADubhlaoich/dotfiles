@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Emmet",
+		"GitGutter",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"Sass",
+		"Theme - Afterglow"
+	]
+}
