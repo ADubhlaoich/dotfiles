@@ -8,6 +8,7 @@ filetype plugin on
 
 " Limit the width of git commit messages
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype md setlocal spell textwidth=72
 
 set autoread " Automatically read external file changes
 set cursorline " Highlight the line your cursor is oni
