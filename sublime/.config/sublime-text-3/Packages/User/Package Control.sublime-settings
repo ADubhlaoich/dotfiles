@@ -5,12 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"Anaconda",
+		"BracketHighlighter",
 		"Emmet",
 		"GitGutter",
 		"Markdown Extended",
 		"Markdown Preview",
 		"Package Control",
 		"Sass",
+		"SideBarEnhancements",
 		"Theme - Afterglow"
 	]
 }

@@ -6,7 +6,15 @@
 	[
 		"Vintage"
 	],
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_tags": false,
+	"show_definitions": false,
+	"show_errors_inline": false,
 	"status_bar_brighter": true,
 	"tabs_small": true,
-	"theme": "Afterglow.sublime-theme"
+	"theme": "Afterglow.sublime-theme",
+	"translate_tabs_to_spaces": true
 }
