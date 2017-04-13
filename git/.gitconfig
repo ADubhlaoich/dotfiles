@@ -1,3 +1,7 @@
 [user]
 	name = Alan Dooley
 	email = alandubhlaoich@gmail.com
+[core]
+	editor = vim
+[push]
+	default = simple
