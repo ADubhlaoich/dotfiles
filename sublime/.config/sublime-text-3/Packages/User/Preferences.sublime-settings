@@ -1,7 +1,6 @@
 {
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
-	"font_face": "Dejavu Sans Mono",
+	"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme"	"font_face": "Dejavu Sans Mono",
 	"ignored_packages":
 	[
 		"Vintage"
