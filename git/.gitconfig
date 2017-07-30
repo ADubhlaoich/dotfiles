@@ -4,4 +4,6 @@
 [core]
 	editor = vim
 [push]
-	default = simple
+    default = simple
+[commit]
+    template = ~/.gitmessage
