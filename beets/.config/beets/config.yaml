@@ -1,0 +1,10 @@
+directory: ~/Music
+library: ~/.config/beets/musicLibrary.db
+plugins: convert fetchart ftintitle 
+
+convert:
+    copy_album_art: yes
+    dest: ~/Converted
+
+ftintitle:
+    auto: yes
