@@ -8,9 +8,22 @@ URxvt*background: black
 URxvt*foreground: white
 URxvt*colorUL: yellow
 URxvT*underlineColor: yellow
-URxvt*color0: #000000
-URxvt*color1: #A80000
-
+urxvt*color0: #6c6c6c
+urxvt*color1: #e9897c
+urxvt*color2: #b6e77d
+urxvt*color3: #ecebbe
+urxvt*color4: #a9cdeb
+urxvt*color5: #ea96eb
+urxvt*color6: #c9caec
+urxvt*color7: #f2f2f2
+urxvt*color8:    #747474
+urxvt*color9:    #f99286
+urxvt*color10:    #c3f786
+urxvt*color11:    #fcfbcc
+urxvt*color12:    #b6defb
+urxvt*color13:    #fba1fb
+urxvt*color14:    #d7d9fc
+urxvt*color15:    #e2e2e2
 
 URxvt*scrollBar_right: false
 URxvt*scrollBar: false
