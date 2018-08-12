@@ -1,7 +1,16 @@
 {
+	"centurion_color_grey": true,
+	"color_scheme": "Packages/Theme - Centurion/Galea.tmTheme",
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_brackets_square": false,
+	"match_tags": false,
+	"theme": "Centurion.sublime-theme",
 	"update_check": false
 }

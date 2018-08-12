@@ -5,7 +5,14 @@
 	],
 	"installed_packages":
 	[
+		"Alignment",
+		"All Autocomplete",
+		"BracketHighlighter",
 		"Emmet",
-		"Package Control"
+		"Git",
+		"GitGutter",
+		"Package Control",
+		"SideBarEnhancements",
+		"Theme - Centurion"
 	]
 }

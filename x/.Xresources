@@ -1,4 +1,17 @@
-URxvt.font: xft:Fira Code:size=10:antialias=true:hinting=true
-URxvt.letterSpace: -1
-URxvt.scrollBar: off
+! Enables clickable URLs in the terminal
+URxvt.perl-ext-common: matcher,readline
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
 
+! Colours
+URxvt*background: black
+URxvt*foreground: white
+URxvt*colorUL: yellow
+URxvT*underlineColor: yellow
+URxvt*color0: #000000
+URxvt*color1: #A80000
+
+
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+URxvt*borderLess: false
