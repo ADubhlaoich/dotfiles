@@ -1,6 +1,9 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-udiskie &
+udiskie & 
 dropbox &
 keepassxc &
+cmst &
+
 exec i3
+
