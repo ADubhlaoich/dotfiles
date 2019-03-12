@@ -3,7 +3,5 @@
 udiskie & 
 dropbox &
 keepassxc &
-cmst &
 
 exec i3
-

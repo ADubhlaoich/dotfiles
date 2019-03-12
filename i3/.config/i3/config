@@ -7,7 +7,7 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -82,7 +82,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -143,21 +142,18 @@ bindsym $mod+r mode "resize"
 
 font pango:DejaVu Sans Mono 8
 
-set $mod Mod4
-
-set $selescrot "scrot -s -q 100 ~/Pictures/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
-#set $windscrot "scrot -u -q 100 ~/Pictures/Screenshots/%Y-%m-%d.jpg"
-set $fullscrot "scrot -q 100 ~/Pictures/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
-
-bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
-bindsym --release Print exec $selescrot
-#bindsym --release Shift+Print $windscrot
-bindsym --release Control+Print exec $fullscrot
-
 bar {
     status_command SCRIPT_DIR=~/.config/i3blocks/i3blocks-contrib i3blocks
     position top
 }
+
+set $mod Mod4
+set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
+set $fullscrot "scrot -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
+
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
+bindsym --release Print exec $selescrot
+bindsym --release Control+Print exec $fullscrot
 
 default_border pixel 1
 hide_edge_borders smart
