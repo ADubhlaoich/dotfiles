@@ -6,6 +6,7 @@ filetype plugin on
 " The below enables spellchecking and fixed width for git commits
 " for which vim is set as the default editor
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype make setlocal noexpandtab shiftwidth=8 softtabstop=0
 
 " tabstop is redundant due to the usage of expand tab
 set expandtab      " Tab key inserts spaces instead of tab characters
@@ -15,7 +16,7 @@ set shiftwidth=4   " Use < and > for indentation in visual mode
 
 set wrap           " Wraps text once it hits the width limit
 set textwidth=79   " 79 is PEP-8 compatible, 80 is nice for markdown
-set colorcolumn=85 " Visual indicator at 85 columns to show I've gone over
+set colorcolumn=80 " Visual indicator at 85 columns to show I've gone over
 
 set number         " Add line numbers
 set ruler          " Show current position
