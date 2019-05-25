@@ -142,18 +142,17 @@ bindsym $mod+r mode "resize"
 
 font pango:DejaVu Sans Mono 8
 
-bar {
-    status_command SCRIPT_DIR=~/.config/i3blocks/i3blocks-contrib i3blocks
-    position top
-}
-
 set $mod Mod4
 set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 set $fullscrot "scrot -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 
-bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
 bindsym --release Print exec $selescrot
 bindsym --release Control+Print exec $fullscrot
 
 default_border pixel 1
 hide_edge_borders smart
+
+#gaps inner 10
+#smart_borders on
+#smart_gaps on
