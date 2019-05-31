@@ -1,7 +1,19 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-udiskie & 
-dropbox &
-keepassxc &
+start_config() {
+    setxkbmap ie
+}
 
-exec i3
+start_utilities() {
+    udiskie &
+    dropbox &
+    keepassxc &
+}
+
+start_wm() {
+    exec i3
+}
+
+start_config
+start_utilities
+start_wm
