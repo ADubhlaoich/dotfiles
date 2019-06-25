@@ -111,7 +111,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -147,6 +147,11 @@ set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 set $fullscrot "scrot -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
+
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5%- unmute"
+
 bindsym --release Print exec $selescrot
 bindsym --release Control+Print exec $fullscrot
 
