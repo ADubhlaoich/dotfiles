@@ -110,8 +110,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -145,21 +143,32 @@ font pango:DejaVu Sans Mono 8
 set $mod Mod4
 set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 set $fullscrot "scrot -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
+set $lock i3lock-fancy -gp && sleep 1
+set $lock_system (l) Lock, (e) Logout, (s) Suspend, (r) Reboot, (Shift+s) Shutdown
+set $rofi "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
 
-bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
+mode "$lock_system" {
+    bindsym l exec --no-startup-id $lock, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $lock && systemctl suspend, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
+bindsym --release Print exec $selescrot
+bindsym --release Control+Print exec $fullscrot
+bindsym $mod+x mode "$lock_system"
+bindsym $mod+d exec $rofi 
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5%- unmute"
 
-bindsym --release Print exec $selescrot
-bindsym --release Control+Print exec $fullscrot
-
 default_border pixel 1
 hide_edge_borders smart
-
-#gaps inner 10
-#smart_borders on
-#smart_gaps on
+gaps inner 10
+smart_borders on
+smart_gaps on
 
 exec_always --no-startup-id ~/.config/polybar/launch
