@@ -145,6 +145,7 @@ set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 set $fullscrot "scrot -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
 set $lock i3lock-fancy -gp && sleep 1
 set $lock_system (l) Lock, (e) Logout, (s) Suspend, (r) Reboot, (Shift+s) Shutdown
+set $monitor_system (v) External On, (b) External Off
 set $rofi "rofi -combi-modi window,drun -show combi -modi combi -show-icons"
 
 mode "$lock_system" {
@@ -157,9 +158,17 @@ mode "$lock_system" {
     bindsym Escape mode "default"
 }
 
+mode "$monitor_system" {
+    bindsym v exec --no-startup-id xrandr --output VGA-1 --right-of LVDS-1 --auto, mode "default"
+    bindsym b exec --no-startup-id xrandr --output VGA-1 --off, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default
+}
+
 bindsym --release Print exec $selescrot
 bindsym --release Control+Print exec $fullscrot
 bindsym $mod+x mode "$lock_system"
+bindsym $mod+Shift+x mode "$monitor_system"
 bindsym $mod+d exec $rofi 
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute"
