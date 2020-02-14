@@ -6,6 +6,7 @@ start_config() {
 
 start_utilities() {
     udiskie &
+    dunst &
     dropbox &
     keepassxc &
 }
