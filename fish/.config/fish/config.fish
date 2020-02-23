@@ -5,8 +5,9 @@ if not functions -q fisher
     fish -c fisher
 end
 
-# Autostart X on login
+set pipenv_fish_fancy yes
 
+# Autostart X on login
 if status is-login
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
         exec startx -- -keeptty
