@@ -138,7 +138,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-font pango:DejaVu Sans Mono 8
+font pango:Fira Mono 8
 
 set $mod Mod4
 set $selescrot "scrot -s -q 100 ~/Dropbox/Screenshots/%Y-%m-%d-%H:%M:%S.jpg"
