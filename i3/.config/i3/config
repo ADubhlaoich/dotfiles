@@ -162,7 +162,7 @@ mode "$monitor_system" {
     bindsym v exec --no-startup-id xrandr --output VGA-1 --right-of LVDS-1 --auto, mode "default"
     bindsym b exec --no-startup-id xrandr --output VGA-1 --off, mode "default"
     bindsym Return mode "default"
-    bindsym Escape mode "default
+    bindsym Escape mode "default"
 }
 
 bindsym --release Print exec $selescrot
