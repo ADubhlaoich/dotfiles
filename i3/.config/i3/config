@@ -178,3 +178,4 @@ default_border pixel 1
 hide_edge_borders smart
 
 exec_always --no-startup-id ~/.config/polybar/launch
+exec_always --no-startup-id setxkbmap ie
