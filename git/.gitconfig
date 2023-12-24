@@ -1,0 +1,18 @@
+[user]
+    name = Alan Dooley
+    email = code@adubhlaoi.ch 
+    signingkey = /home/adubhlaoich/.ssh/code@adubhlaoi.ch.pub
+[core]
+    editor = vim
+[init]
+    defaultBranch = main
+[push]
+    default = simple
+    autoSetupRemote = true
+[commit]
+    template = ~/.gitmessage
+    gpgsign = true
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = /home/adubhlaoich/.config/git/allowed_signers

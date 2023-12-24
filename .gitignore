@@ -1,0 +1,12 @@
+# Music on Console
+equalizer
+last_directory
+playlist.m3u
+softmixer
+pid
+
+# vim
+.netrwhist
+autoload
+vim-plugins
+code/.config/Code - OSS

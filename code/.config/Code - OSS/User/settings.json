@@ -1,0 +1,41 @@
+{
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.mode": "start",
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "telemetry.telemetryLevel": "off",
+    "git.autofetch": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.tips.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*.njk": "html"
+    },
+    "workbench.startupEditor": "none",
+    "vetur.useWorkspaceDependencies": true,
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "prettier.semi": false,
+    "prettier.tabWidth": 4,
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "python.formatting.provider": "black",
+    "prettier.enable": false,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+            "printWidth": 100,
+            "singleQuote": false,
+            "wrapAttributes": false,
+            "sortAttributes": false
+        }
+    }
+}
