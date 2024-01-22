@@ -3,7 +3,7 @@
     email = code@adubhlaoi.ch 
     signingkey = /home/adubhlaoich/.ssh/code@adubhlaoi.ch.pub
 [core]
-    editor = vim
+    editor = nvim
 [init]
     defaultBranch = main
 [push]
