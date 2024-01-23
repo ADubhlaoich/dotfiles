@@ -27,6 +27,7 @@ fi
 
 path+=~/.local/bin
 
+export EDITOR=nvim
 export PATH
 export LC_CTYPE=en_US.UTF-8
 
