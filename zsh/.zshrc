@@ -32,3 +32,4 @@ export PATH
 export LC_CTYPE=en_US.UTF-8
 
 eval "$(starship init zsh)"
+. "$HOME/.cargo/env"
