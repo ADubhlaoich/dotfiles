@@ -1,14 +1,16 @@
 # ADubhlaoich's dotfiles
 
-This is a collection of dotfiles for the applications I use as my 'stack' on Linux. The folders are structured for use with [GNU Stow](https://www.gnu.org/software/stow/), which makes creating symlinks easy. Type `stow <folder>` within the repo folder to create a link in your home folder, `stow -D <folder>` to remove it and `stow -R <folder>` to do both.
+These are my dotfiles for most of the software I use on a daily basis.
 
-## Core Applications
-* i3-wm
-	* i3blocks
-	* [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
-* pcmanfm
-* rofi
+I'm currently running Arch Linux: I can see myself swapping to NixOS in the future.
 
-## Miscellaneous Applications
-* feh
-* redshift
+I use [GNU Stow](https://github.com/ADubhlaoich/dotfiles) to manage my files.
+
+```shell
+# Create symlink for a program
+stow <folder-name>
+# Remove symlink for a program
+stow -D <folder-name>
+```
+
+The `scripts/` folder contains small scripts I could probably symlink to my path.
