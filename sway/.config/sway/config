@@ -1,4 +1,4 @@
-# Default config for sway
+
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -31,7 +31,9 @@ exec keepassxc
 
 ## Keybinds
 
-bindsym Print exec "wayshot -s "$(slurp)" --stdout | wl-copy"
+bindsym Print exec grim -g "$(slurp)" - | wl-copy 
+bindsym Shift+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
+bindsym $mod+Shift+d exec nautilus
 
 ### Output configuration
 #
