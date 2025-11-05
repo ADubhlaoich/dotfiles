@@ -1,17 +1,14 @@
-directory: ~/Music 
-library: ~/.config/beets/musicLibrary.db
-plugins: convert duplicates embedart fetchart fromfilename ftintitle 
+directory: ~/music 
+library: ~/.config/beets/library.db
+plugins: convert duplicates embedart fetchart fromfilename 
 
 import:
   move: yes
 
 convert:
   copy_album_art: yes
-  dest: ~/Converted
+  dest: ~/Downloads/Music
 
 embedart:
   ifempty: yes
   remove_art_file: yes
-
-ftintitle:
-  auto: yes

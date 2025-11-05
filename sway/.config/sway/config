@@ -20,25 +20,9 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu fuzzel | xargs swaymsg exec --
 
-### Other
-
-default_border none
-
-## Start-up programs
-exec udiskie &
-exec dropbox
-exec keepassxc
-
-## Keybinds
-
-bindsym Print exec grim -g "$(slurp)" - | wl-copy 
-bindsym Shift+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
-bindsym $mod+Shift+d exec nautilus
-
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -46,7 +30,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 scale 1.5
 
 ### Idle configuration
 #
@@ -225,3 +208,25 @@ bindsym $mod+r mode "resize"
 bar swaybar_command waybar
 
 include /etc/sway/config.d/*
+
+exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+exec wl-paste --watch cliphist store
+exec udiskie &
+exec dunst
+exec dropbox
+exec keepassxc
+
+bindsym Print exec grim -g "$(slurp)" - | wl-copy 
+bindsym Shift+Print exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
+
+bindsym $mod+Shift+d exec nautilus
+
+bindsym Ctrl+Space exec dunstctl close
+bindsym Ctrl+Shift+Space exec dunstctl close-all
+bindsym $mod+Shift+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+
+workspace 1 output eDP-1
+workspace 6 output DP-3
+
+default_border none
+

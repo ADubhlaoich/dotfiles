@@ -69,7 +69,7 @@
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-MusicDir = /home/adubhlaoich/Music
+MusicDir = /home/adubhlaoich/music
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
@@ -124,7 +124,7 @@ StartInMusicDir = yes
 # Sound driver - OSS, ALSA, JACK, SNDIO (on OpenBSD) or null (only for
 # debugging).  You can enter more than one driver as a colon-separated
 # list.  The first working driver will be used.
-#SoundDriver = PULSEAUDIO:JACK:ALSA:OSS
+SoundDriver = PULSEAUDIO:ALSA:OSS:JACK
 
 # Jack output settings.
 #JackClientName = "moc"
@@ -688,3 +688,4 @@ ShowFormat = no
 # players usually behave.  (Note that this option previously took the
 # values 1 and 0; these are now deprecated in favour of 'yes' and 'no'.)
 #QueueNextSongReturn = yes
+
